@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Уроки. ReactJS.</title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+</head>
+<body>
+
+<div id="root"></div>
+
+<script type="text/babel">
+
+    function H1(props) {
+        return (
+            <h1>Урок {props.lessonNumber}. Часть {props.partNumber}.</h1>
+        );
+    }
+
+    function H3() {
+        return <h3>Четыре типажа программиста</h3>;
+    }
+
+    function Ul() {
+        return (
+            <ul>
+                <Li href="page1.html" name="Линейный программист" />
+                <Li href="page2.html" name="Rock star (Software Scientist)" />
+                <Li href="page3.html" name="Делец (Software Engineer)" />
+                <Li href="page4.html" name="Пассажир (business bullshitter)" />
+            </ul>
+        );
+    }
+
+    function A(props) {
+        return <a href={props.href}>{props.name}</a>;
+    }
+
+    function Li(props) {
+        return (
+            <li><A href={props.href} name={props.name}/></li>
+        );
+    }
+
+    function App() {
+        return (
+            <div>
+                <H1 lessonNumber="1" partNumber="2" />
+                <H3 />
+                <Ul />
+            </div>
+        );
+    }
+
+    ReactDOM.render(
+        <App />,
+        document.getElementById('root')
+    );
+</script>
+</body>
+</html>
