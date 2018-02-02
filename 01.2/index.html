@@ -63,18 +63,13 @@
     }
 
     class Button extends React.Component {
-        constructor(props) {
-            super(props);
-            this.buttonClick = this.buttonClick.bind(this);
-        }
-
-        buttonClick() {
-            alert('Нажали кнопку!');
-        }
+        click = () => {
+            alert(this.props.msg);
+        };
 
         render() {
             return (
-                <button style={styles.button} onClick={() => this.buttonClick()}>Нажмите кнопку</button>
+                <button style={styles.button} onClick={this.click}>{this.props.caption}</button>
             );
         }
     }
@@ -85,7 +80,7 @@
                 <H1 lessonNumber="1" partNumber="2" />
                 <H3 />
                 <Ul />
-                <Button />
+                <Button msg="Нажали кнопку!" caption="Нажми на кнопку"/>
             </Div>
         );
     }
