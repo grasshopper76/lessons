@@ -1,0 +1,35 @@
+.container {
+  div {
+    padding: 15px;
+  }
+
+  ul {
+    list-style-type: circle;
+  }
+
+  button {
+    background-color: lightslategray;
+    font-family: "Arial", serif;
+    font-size: 150%;
+  }
+
+  h1 {
+    color: indigo;
+  }
+  h1::first-letter {
+    font-family: "Arial", serif;
+    color: maroon;
+  }
+
+  h3 {
+    color: saddlebrown;
+  }
+  h3::first-letter {
+    font-family: "Arial", serif;
+    color: blue;
+  }
+
+  a {
+    font-family: "Arial", serif;
+  }
+}
